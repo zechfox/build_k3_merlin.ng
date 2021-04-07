@@ -93,9 +93,9 @@ jobs:
         
         cd /media/asuswrt/asuswrt-merlin.ng
         git checkout mainline    
-        echo "::set-env name=MERLIN_VERSION::$(git show-ref --heads -s)"
-        echo "::set-env name=MERLIN_TAG::$(git show-ref --heads --hash=8)"
-        echo "::set-env name=BUILD_DATE::$(date +%Y%m%d%H%M)"
+        echo "{MERLIN_VERSION}={$(git show-ref --heads -s)}" >> $GITHUB_ENV
+        echo "{MERLIN_TAG}={$(git show-ref --heads --hash=8)}" >> $GITHUB_ENV
+        echo "{BUILD_DATE}::{$(date +%Y%m%d%H%M)}" >> $GITGUB_ENV
         
     - name: Modify File
       run: |        
