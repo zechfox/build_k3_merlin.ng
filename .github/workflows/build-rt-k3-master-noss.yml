@@ -94,7 +94,7 @@ jobs:
         cd /media/asuswrt/asuswrt-merlin.ng
         echo "MERLIN_VERSION=$(git show-ref --heads -s)" >> $GITHUB_ENV
         echo "MERLIN_TAG=$(git show-ref --heads --hash=8)" >> $GITHUB_ENV
-        echo "BUILD_DATE=$(date +%Y%m%d%H%M)" >> $GITGUB_ENV
+        echo "BUILD_DATE=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
         
     - name: Modify File
       run: |  
