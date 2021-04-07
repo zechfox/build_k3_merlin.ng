@@ -25,8 +25,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
-    - name: set env file
-      run: echo "mypath" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - name: Checkout
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       uses: actions/checkout@v2
